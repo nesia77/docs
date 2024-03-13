@@ -1,3 +1,48 @@
 site_name: Textstat
+site_url: https://docs.textstat.org
+repo_url: https://github.com/textstat/textstat
+repo_name: textstat
+edit_uri: https://github.com/textstat/docs/edit/main/docs/
+
+plugins:
+  - search
+
+nav:
+  - Home: https://textstat.org
+  - Getting started:
+    - Installation: index.md
+
 theme:
   name: material
+  logo: images/textstat.webp
+  features:
+    - navigation.tabs
+    - content.action.edit
+    - content.action.view
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/file-edit-outline
+    view: material/eye-outline
+  favicon: images/favicon.ico
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: black
+      accent: teal
+      toggle:
+        icon: material/lightbulb-variant-outline
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
